@@ -1,4 +1,4 @@
-{% set version = '0.10.7' %}
+{% set version = "0.11.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/expss_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/expss/expss_{{ version }}.tar.gz
-  sha256: 3e705d2345c5d96e19f7507f1d1e2829e8cd06c578fc6f4f12bf9f0d9b07212f
+  sha256: 9fa43526489937fa9c30e474c0a1d3123654e8a2018c98e20bf2e4c7c606e585
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -46,19 +46,12 @@ test:
 about:
   home: https://gdemin.github.io/expss/
   license: GPL-2.0-only
-  summary: 'Package computes and displays tables with support for ''SPSS''-style labels, multiple
-    and nested banners, weights, multiple-response variables and significance testing.
-    There are facilities for nice output of tables in ''knitr'', ''Shiny'', ''*.xlsx''
-    files, R and ''Jupyter'' notebooks. Methods for labelled variables add value labels
-    support to base R functions and to some functions from other packages. Additionally,
-    the package brings popular data transformation functions from ''SPSS'' Statistics
-    and ''Excel'': ''RECODE'', ''COUNT'', ''COMPUTE'', ''DO IF'', ''COUNTIF'', ''VLOOKUP''
-    and etc. These functions are very useful for data processing in marketing research
-    surveys. Package intended to help people to move data processing from ''Excel''
-    and ''SPSS'' to R.'
+  summary: "Package computes and displays tables with support for 'SPSS'-style labels, multiple and nested banners, weights, multiple-response variables and significance testing. There are facilities for nice output of tables in 'knitr', 'Shiny', '*.xlsx' files, R and 'Jupyter' notebooks. Methods for labelled variables add\
+    \ value labels support to base R functions and to some functions from other packages. Additionally, the package brings popular data transformation functions from 'SPSS' Statistics and 'Excel': 'RECODE', 'COUNT', 'COMPUTE', 'DO IF', 'COUNTIF', 'VLOOKUP' and etc. These functions are very useful for data processing in marketing\
+    \ research surveys. Package intended to help people to move data processing from 'Excel' and 'SPSS' to R."
   license_family: GPL2
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
