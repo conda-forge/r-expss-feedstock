@@ -3,9 +3,9 @@ About r-expss
 
 Home: https://gdemin.github.io/expss/
 
-Package license: GPL-2.0-only
+Package license: GPL-2.0-or-later
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-expss-feedstock/blob/master/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-expss-feedstock/blob/main/LICENSE.txt)
 
 Summary: Package computes and displays tables with support for 'SPSS'-style labels, multiple and nested banners, weights, multiple-response variables and significance testing. There are facilities for nice output of tables in 'knitr', 'Shiny', '*.xlsx' files, R and 'Jupyter' notebooks. Methods for labelled variables add value labels support to base R functions and to some functions from other packages. Additionally, the package brings popular data transformation functions from 'SPSS' Statistics and 'Excel': 'RECODE', 'COUNT', 'COMPUTE', 'DO IF', 'COUNTIF', 'VLOOKUP' and etc. These functions are very useful for data processing in marketing research surveys. Package intended to help people to move data processing from 'Excel' and 'SPSS' to R.
 
@@ -15,8 +15,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11582&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-expss-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11582&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-expss-feedstock?branchName=main">
       </a>
     </td>
   </tr>
@@ -39,16 +39,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `r-expss` can be installed with:
+Once the `conda-forge` channel has been enabled, `r-expss` can be installed with `conda`:
 
 ```
 conda install r-expss
 ```
 
-It is possible to list all of the versions of `r-expss` available on your platform with:
+or with `mamba`:
+
+```
+mamba install r-expss
+```
+
+It is possible to list all of the versions of `r-expss` available on your platform with `conda`:
 
 ```
 conda search r-expss --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search r-expss --channel conda-forge
+```
+
+Alternatively, `mamba repoquery` may provide more information:
+
+```
+# Search all versions available on your platform:
+mamba repoquery search r-expss --channel conda-forge
+
+# List packages depending on `r-expss`:
+mamba repoquery whoneeds r-expss --channel conda-forge
+
+# List dependencies of `r-expss`:
+mamba repoquery depends r-expss --channel conda-forge
 ```
 
 
@@ -66,10 +91,12 @@ for each of the installable packages. Such a repository is known as a *feedstock
 A feedstock is made up of a conda recipe (the instructions on what and how to build
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
-[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/)
-and [TravisCI](https://travis-ci.com/) it is possible to build and upload installable
-packages to the [conda-forge](https://anaconda.org/conda-forge)
-[Anaconda-Cloud](https://anaconda.org/) channel for Linux, Windows and OSX respectively.
+[Azure](https://azure.microsoft.com/en-us/services/devops/), [GitHub](https://github.com/),
+[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
+[Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
+it is possible to build and upload installable packages to the
+[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
