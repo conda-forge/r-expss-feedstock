@@ -1,4 +1,4 @@
-{% set version = "0.11.1" %}
+{% set version = "0.11.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/expss_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/expss/expss_{{ version }}.tar.gz
-  sha256: 9fa43526489937fa9c30e474c0a1d3123654e8a2018c98e20bf2e4c7c606e585
+  sha256: 2c58cc86d9d24c3e07e4b702f9453f503233d8082cfdc6727273d51a66390f8a
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
