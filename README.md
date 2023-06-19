@@ -1,11 +1,11 @@
-About r-expss
-=============
+About r-expss-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-expss-feedstock/blob/main/LICENSE.txt)
 
 Home: https://gdemin.github.io/expss/
 
 Package license: GPL-2.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-expss-feedstock/blob/main/LICENSE.txt)
 
 Summary: Package computes and displays tables with support for 'SPSS'-style labels, multiple and nested banners, weights, multiple-response variables and significance testing. There are facilities for nice output of tables in 'knitr', 'Shiny', '*.xlsx' files, R and 'Jupyter' notebooks. Methods for labelled variables add value labels support to base R functions and to some functions from other packages. Additionally, the package brings popular data transformation functions from 'SPSS' Statistics and 'Excel': 'RECODE', 'COUNT', 'COMPUTE', 'DO IF', 'COUNTIF', 'VLOOKUP' and etc. These functions are very useful for data processing in marketing research surveys. Package intended to help people to move data processing from 'Excel' and 'SPSS' to R.
 
