@@ -1,4 +1,4 @@
-{% set version = "0.11.6" %}
+{% set version = "0.11.7" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/expss_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/expss/expss_{{ version }}.tar.gz
-  sha256: bcd14d631560262bd4e530ec95e68fc4082c8086d8848b7330fce0ae6ff2efe3
+  sha256: dbd196eb65d2433bd2411facdbaa932239230ce6a6ef574bb4c98ef1b1fade3d
 
 build:
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
